@@ -12,36 +12,25 @@
     <input id="num" oninput="isPrimeNum()">
     <code id="panel"></code>
     <script>
-        let n = Number(document.getElementById("num").value)
 
 
         function isPrimeNum() {
+            let n = Number(document.getElementById("num").value)
 
-            findRootNumber();
-
-        }
-
-        function findRootNumber() {
             let root = 0
             for (let i = 1; i < n; i++) {
                 if (n % i == 0) {
                     root = i
                 }
-            checkRootNumberAndDisplayPrimeNum()
-            }
-
-            
-        }
-
-        function checkRootNumberAndDisplayPrimeNum() {
                 if (root == 1) {
                     document.getElementById("panel").innerText = n + " la so nguyen to"
                 } else {
                     document.getElementById("panel").innerText = n + " khong la so nguyen to"
                 }
-            }
-        
 
+            }
+
+        }
 
     </script>
 </body>
