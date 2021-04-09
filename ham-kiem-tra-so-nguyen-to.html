@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ham kiem tra so nguyen to</title>
+</head>
+
+<body>
+    <input id="num" oninput="isPrimeNum()">
+    <code id="panel"></code>
+    <script>
+        let n = Number(document.getElementById("num").value)
+
+
+        function isPrimeNum() {
+
+            findRootNumber();
+
+        }
+
+        function findRootNumber() {
+            let root = 0
+            for (let i = 1; i < n; i++) {
+                if (n % i == 0) {
+                    root = i
+                }
+            checkRootNumberAndDisplayPrimeNum()
+            }
+
+            
+        }
+
+        function checkRootNumberAndDisplayPrimeNum() {
+                if (root == 1) {
+                    document.getElementById("panel").innerText = n + " la so nguyen to"
+                } else {
+                    document.getElementById("panel").innerText = n + " khong la so nguyen to"
+                }
+            }
+        
+
+
+    </script>
+</body>
+
+</html>
