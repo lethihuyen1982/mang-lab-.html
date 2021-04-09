@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyen doi giua feet va meters</title>
+</head>
+
+<body>
+    Foot <input id="foot" type="number" oninput="footToMeter()">;
+    <br>
+    <br>
+    Meter <input id="meter" type="number" oninput="meterToFoot()">
+    <br>
+    <pre id="panel"></pre>
+
+    <script>
+        function footToMeter() {
+            let foot = Number(document.getElementById("foot").value);
+            let meter = 0.305 * foot
+            document.getElementById("panel").innerText = meter
+        }
+
+        function meterToFoot() {
+            let meter = Number(document.getElementById("meter").value);
+            let foot = 3.279 * meter
+            document.getElementById("panel").innerText = foot
+        }
+    </script>
+</body>
+
+</html>
